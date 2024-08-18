@@ -45,6 +45,10 @@ Auto-scaling groups, load balancing, and health checks are built into every laye
 - High Availability: The application is kept up to date even in the event of failures thanks to the utilization of load balancers and multi-AZ deployments.
 
 
+ Architecture Diagram
+
+![fdd](https://github.com/user-attachments/assets/ef932648-d66a-4f77-b366-2754b7017375)
+
 Project Walkthrough
 
 This section provides a step-by-step guide on how to set up the three-tier architecture:
