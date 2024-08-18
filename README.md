@@ -21,7 +21,7 @@ Architecture Breakdown
 
 The architecture is composed of three main layers:
 
-- Web Tier: This layer handles incoming client traffic through a public-facing Application Load Balancer (ALB). Requests are distributed to EC2 instances running Nginx web servers, which serve a React.js frontend. Requests directed to APIs are redirected to the internal load balancer, which then forwards them to the application tier.
+- Web Tier: This layer handles incoming client traffic through a public-facing Application Load Balancer (ALB). Requests go to EC2 instances with Nginx servers, which show the React.js frontend. API requests are sent to an internal load balancer, which then sends them to the application tier.
 
 - Application Tier: The application tier is powered by Node.js, handling business logic and processing API requests. Data is returned to the web tier after being processed by this tier, which interacts with the database layer. EC2 instances are distributed across multiple internal load balancers to ensure redundancy and scalability.
 
@@ -29,7 +29,8 @@ The architecture is composed of three main layers:
 
 
 
-- Database Tier: Database Tier: This layer is made up of a multi-AZ-deployed Amazon Aurora MySQL database. High availability and data integrity are ensured by the database tier's ability to manage data storage, retrieval, and manipulation.Database Tier: This layer is made up of a multi-AZ-deployed Amazon Aurora MySQL database. High availability and data integrity are ensured by the database tier's ability to manage data storage, retrieval, and manipulation.
+- Database Tier: Database Tier: This layer is made up of a multi-AZ-deployed Amazon Aurora MySQL database. High availability and data integrity are ensured by the database tier's ability to manage data storage, retrieval, and manipulation.Database Tier: This layer is made up of a multi-AZ-deployed Amazon Aurora MySQL database.The database setup keeps your data available and secure, handling storage and access smoothly.
+
 
 Auto-scaling groups, load balancing, and health checks are built into every layer to ensure the architecture's availability and performance.
 
@@ -44,11 +45,7 @@ Auto-scaling groups, load balancing, and health checks are built into every laye
 - High Availability: The application is kept up to date even in the event of failures thanks to the utilization of load balancers and multi-AZ deployments.
 
 
-## Architecture Diagram
-
-(Insert your customized architecture diagram here, showing how the web, application, and database tiers interact within the AWS environment.)
-
-## Project Walkthrough
+Project Walkthrough
 
 This section provides a step-by-step guide on how to set up the three-tier architecture:
 
@@ -67,14 +64,6 @@ This section provides a step-by-step guide on how to set up the three-tier archi
 Key Learnings and Insights
 
 I developed a greater awareness of the design and implementation of scalable, secure, and high-availability architectures in AWS during this assignment. My understanding of fundamental AWS services and best practices for cloud architecture design have been strengthened by my practical experience with manual configuration.
-
-Future Enhancements
-
-- Automation: In the future, I plan to automate the deployment of this architecture using AWS CloudFormation or Terraform.
-
-- Monitoring and Logging: Adding comprehensive monitoring and logging with Amazon CloudWatch and AWS CloudTrail to further enhance the observability of the system.
-
-- Cost Optimization: Implementing cost management practices to ensure the architecture is both effective and economical.
 
 
 
