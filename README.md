@@ -1,7 +1,5 @@
-# Three-Tier-Architecture
 AWS three-tier web architecture 
 
- AWS Three-Tier Web Architecture
 
  Prerequisites
 
